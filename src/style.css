@@ -1,0 +1,474 @@
+/* Botón de accesibilidad */
+#accesibilidad-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#accesibilidad-btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#accesibilidad-btn img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Zoom en Cursor */
+.zoom-cursor *:hover {
+  transform: scale(1.5);
+}
+
+/* Desactivar Animaciones */
+.no-animations * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Contraste Alto */
+.high-contrast {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+.high-contrast header, 
+.high-contrast footer {
+  background-color: #111111 !important;
+  color: #FFFFFF !important;
+}
+
+.high-contrast main {
+  background-color: #222222 !important;
+  color: #FFFFFF !important;
+}
+
+.high-contrast section, 
+.high-contrast article {
+  background-color: #333333 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #FFFFFF !important;
+}
+
+/* Colores Simples */
+.simplify-colors {
+  background-color: #F7F7F7 !important;
+  color: #000000 !important;
+}
+
+.simplify-colors * {
+  background-color: inherit !important; 
+  color: #000000 !important; 
+  border-color: #000000 !important; 
+}
+
+/* Ajuste de botones */
+.simplify-colors button {
+  background-color: #E0E0E0 !important; 
+  color: #000000 !important;
+  border: 1px solid #000000 !important;
+}
+
+.simplify-colors header {
+    background-color: #B4CDE6 !important;
+    color: #333333 !important;
+}
+
+.simplify-colors footer {
+    background-color: #D6EADF !important;
+    color: #333333 !important;
+}
+
+.simplify-colors main {
+    background-color: #FFE6CC !important; 
+    color: #333333 !important;
+}
+.simplify-colors p{
+  color: #000000;
+}
+.simplify-colors section, 
+.simplify-colors article {
+    background-color: #FFD6D6 !important; 
+    color: #000000 !important;
+    border: 1px solid #999999 !important;
+}
+
+/* Zoom Lupa */
+#zoom-lens {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #333333;
+    background: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 9999;
+}
+.accesibilidad-opcion {
+    margin: 10px 0;
+    width: 80%; 
+}
+
+/* Sidebar de accesibilidad */
+
+#accesibilidad-sidebar {
+  position: fixed;
+  top: 60px; 
+  right: 0;
+  width: 300px;
+  background: linear-gradient(135deg, #9B59B6, #E91E63);
+  color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  padding: 20px;
+  border-radius: 10px 0 0 10px;
+  height: calc(100vh - 80px); 
+  overflow-y: auto;
+}
+
+#accesibilidad-sidebar.open {
+  transform: translateX(0);
+}
+
+.close-sidebar {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.accesibilidad-opcion {
+  background: #FFFFFF;
+  color: #7A00E0;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.accesibilidad-opcion:active {
+  background: #7A00E0;
+  color: white;
+}
+
+/* fuentes importadas */
+@font-face {
+  font-family: 'Celinda';
+  src: url('fonts/celinda-regular.otf') format('otf'),
+       url('fonts/celinda-regular.otf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Neue Gravica';
+  src: url('fonts/neue-gravica-regular.otf') format('otf'),
+       url('fonts/neue-gravica-regular.otf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Estilo en general */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #e1e1e1;
+    color: #000000;
+    line-height: 1.6;
+    font-weight: bold;
+  }
+
+  
+  /* parte del Header */
+  
+  header {
+    background-color: #1e203c;
+    padding: 1rem 0;
+    margin: 20px 150px 0px 150px;
+    border-radius: 50px;
+  }
+
+ /* parte del nav */
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header nav ul li {
+  margin: 0 2rem;
+}
+header nav ul li a {
+  font-family: "Celinda";
+  text-decoration: none;
+  color: #e1e1e1;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+header nav ul li a:hover {
+  background-color: #d9bbf9;
+  color: #171717;
+}
+header nav ul li button {
+  background: none;
+  border: none;
+  font-family: "Celinda";
+  color: #e1e1e1;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+header nav ul li button:hover {
+  background-color: #d9bbf9; 
+  color: #171717;
+}
+   /* Ícono centrado */
+header nav ul li.icono-centrado {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+header nav ul li.icono-centrado img {
+    width: 50px; 
+    height: auto;
+}
+
+
+  /* Parte del main */
+
+  main {
+    padding: 2rem 1rem;
+  }
+  .introduccion {
+    background-color: #7871aa;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+  }
+  .introduccion h2 {
+    font-family: "Celinda";
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  .introduccion p {
+    font-family: "Neue Gravica";
+    margin-top: 1rem;
+    font-weight: bold;
+    text-align: start;
+  }
+  
+  /* parte de los consejos */
+
+  .consejos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  .consejo-carta {
+    background-color: #d9bbf9;
+    padding: 1.5rem;
+    border-radius: 20px 20px 0px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .consejo-carta a{
+    font-family: "Neue Gravica";
+    text-decoration: none;
+    color: #1e203c;
+  }
+  .consejo-texto{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  } 
+  .consejo-texto p{
+    font-family: "Neue Gravica";
+    padding-top: 15px;
+    font-size: 1rem;
+  }
+ .consejo-imagen {
+    width: 100px;
+    height: 100px;
+    padding-bottom: 20px;
+    margin-right: 1.5rem;
+    object-fit: cover;
+  }
+  .consejo-carta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  .consejo-carta h3 {
+    font-family: "Celinda";
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  /* parte de la información */
+
+  .informacion{
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-evenly;
+  }
+  .informacion-carta{
+    background-color: #31355e;
+    border-radius: 20px;
+    padding: 1.5rem;
+  }
+  .informacion-carta h4{
+    font-family: "Celinda";
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+    color: #e1e1e1;
+  }
+  .informacion-carta p{
+    font-family: "Neue Gravica";
+    font-size: 1rem;
+    color: #e1e1e1;
+  }
+
+  /* parte del Footer */
+
+footer {
+    background-color: #1e203c;
+    color: #e1e1e1;
+    text-align: center;
+    padding: 0rem 0;
+    margin-top: 2rem;
+    font-size: 1rem;
+    border-radius: 50px 50px 0px 0px;
+    font-family: "Neue Gravica";
+}
+footer .informacion-final {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  flex-wrap: wrap;
+  padding: 0.1rem;
+  gap: 2rem;
+}
+h5{
+  font-family: "Celinda";
+  font-size: 20px;
+}
+footer .logo-footer {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  flex: 1; 
+  min-width: 200px;
+}
+footer .logo-footer .logo-imagen {
+  width: 60px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+footer .logo-footer .footer-titulo {
+  font-family: "Celinda";
+  font-size: 1.2rem;
+  color: #e1e1e1;
+  font-weight: bold;
+  margin: 0; 
+}
+
+footer .sobre-nosotros, footer .redes-sociales {
+    flex: 1;
+    min-width: 250px;
+}
+
+footer .iconos-redes {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer .redes {
+    width: 45px;
+    height: 45px;
+    transition: transform 0.3s ease;
+}
+
+footer .redes:hover {
+    transform: scale(1.2);
+}
+
+footer .copyright {
+    font-family: "Neue Gravica";
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+  /* parte del logo y título en el footer */
+.logo-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem 0;
+  gap: 0.5rem;
+}
+
+
+ /* Diseño Responsive*/
+@media (max-width: 768px) {
+    .intro h1 {
+      font-size: 2rem;
+    }
+    header nav ul li a {
+      font-size: 1rem;
+    }
+    .consejo-carta {
+      flex-direction: column;
+      text-align: center;
+    }
+    .consejo-imagen {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    } 
+    footer .informacion-final {
+      flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+      align-items: center;
+    }
+    footer .logo-footer .logo-imagen {
+      width: 50px;
+    }
+    footer .logo-footer .footer-titulo {
+      font-size: 1rem;
+    }
+}

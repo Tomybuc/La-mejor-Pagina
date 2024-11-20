@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB PARA TODOS</title>
+    <link rel="stylesheet" href="style-consejos.css">
+</head>
+<body>
+    <!--Fondo (shape Divider)-->
+    <div class="custom-shape-divider-top-1731987591">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="45%" x2="100%" y2="-30%">
+                    <stop offset="0%" style="stop-color:#31355E;stop-opacity:1" />
+                    <stop offset="25%" style="stop-color:#7871AA;stop-opacity:1" />
+                    <stop offset="110%" style="stop-color:#D9BBF9;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <path d="M0,320 C300,170 900,470 1200,220 L1200,0 L0,0 Z" fill="url(#gradient)"></path>
+            <path d="M0,320 C200,120 1000,520 1200,170 L1200,0 L0,0 Z" fill="url(#gradient)"></path>
+            <path d="M0,320 C400,20 800,420 1200,120 L1200,0 L0,0 Z" fill="url(#gradient)"></path>
+        </svg>
+    </div>
+    
+    <!--El Header o encabezado-->
+
+    <header>
+        <nav>
+         <ul>
+             <li><button onclick="changeLanguage('es')">Español</button></li>
+             <li><button onclick="changeLanguage('en')">English</button></li>
+             <li><a href="videos.html" id="video">VIDEOS</a></li>
+             <li class="icono-centrado"><a href="Index.html"><img src="icons/logo definitivo.png" alt="Logo de la página"></a></li>
+             <li><a href="recursos.html" id="recursos">RECURSOS</a></li>
+             <li><button onclick="changeLanguage('pt')">Português</button></li>
+             <li><button onclick="changeLanguage('ja')">日本語</button></li>
+         </ul>
+        </nav>
+    </header>
+
+    <!--Parte Informativa-->
+
+    <main>
+        <h2 class="titulo-seccion" id="titulo"> Consejos para personas con problemas de Visibilidad</h2>
+        <section class="contenedor">
+            <div class="cartas-grid">
+                <div class="carta">
+                    <h3 class="carta-header" id="consejo1">Usar contraste de colores adecuado</h3>
+                    <p class="carta-desc" id="desc1">Asegúrate de que el texto y los elementos visuales tengan un contraste suficiente con el fondo. Utiliza herramientas como WCAG Contrast Checker para verificar el nivel de contraste.</p>
+                </div>
+                <div class="carta">
+                    <h3 class="carta-header" id="consejo2">Permitir ajuste de tamaño de texto</h3>
+                    <p class="carta-desc"id="desc2">Diseña páginas web que permitan aumentar el tamaño de la fuente sin romper el diseño. Usa unidades relativas como em o rem y evita el texto en imágenes.</p>
+                </div>
+                <div class="carta">
+                    <h3 class="carta-header" id="consejo3">Implementar soporte para lectores de pantalla</h3>
+                    <p class="carta-desc" id="desc3">Usa etiquetas semánticas correctas como <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code> y <code>&lt;footer&gt;</code>. Asegúrate de incluir descripciones en imágenes con el atributo alt.</p>
+                </div>
+                <div class="carta">
+                    <h3 class="carta-header" id="consejo4">Proporcionar modos de alto contraste</h3>
+                    <p class="carta-desc" id="desc4">Ofrece una opción para habilitar un "modo de alto contraste" con colores simples, como texto blanco sobre fondo negro.</p>
+                </div>
+            </div>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/SlFv8nUz1V8?si=lmw0sWnclGpp_ka5" 
+                        title="YouTube video Visibilidad" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!--El footer-->
+
+    <footer>
+        <div class="informacion-final">
+            <div class="sobre-nosotros">
+                <h5 id="nosotros">Sobre nosotros</h5>
+                <p id="info-nosotros">Somos estudiantes de la orientación de Informática del Martín Zapata...</p>
+            </div>
+            <div class="logo-footer">
+                <img src="icons/logo definitivo.png" alt="Logo de la página" class="logo-imagen">
+                <h1 class="footer-titulo">WEB PARA TODOS</h1>
+            </div>
+            <div class="redes-sociales">
+                <h5 id="redes">Redes sociales</h5>
+                <div class="iconos-redes">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="icons/instagram blanco.png" alt="Icono de Instagram" class="redes"></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="icons/twitter blanco.png" alt="Icono de Twitter" class="redes"></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><img src="icons/youtube blanco.png" alt="Icono de YouTube" class="redes"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p id="derechos">Copyright © 2024 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- Botón de accesibilidad -->
+
+    <div id="accesibilidad-container">
+        <button id="accesibilidad-btn">
+            <img src="icons/logo definitivo.png" alt="Accesibilidad">
+        </button>
+        <div id="accesibilidad-sidebar">
+            <button class="close-sidebar" id="close-sidebar">✖</button>
+            <h3>Opciones de Accesibilidad</h3>
+            <button class="accesibilidad-opcion" id="aumentar-texto">Aumentar Texto</button>
+            <button class="accesibilidad-opcion" id="disminuir-texto">Disminuir Texto</button>
+            <button class="accesibilidad-opcion" id="contraste-alto">Contraste Alto</button>
+            <button class="accesibilidad-opcion" id="zoom-cursor">Activar Zoom</button>
+            <button class="accesibilidad-opcion" id="desactivar-animaciones">Desactivar Animaciones</button>
+            <button class="accesibilidad-opcion" id="colores-simples">Colores Simples</button>
+        </div>
+    </div>
+    <script src="narrador.js"></script>
+    <script src="idioma-visibilidad.js"></script>
+    <script src="accesibilidad.js"></script>
+  
+</body>
+</html>

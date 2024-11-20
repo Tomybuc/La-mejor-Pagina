@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB PARA TODOS</title>
+    <link rel="stylesheet" href="style-recursos.css">
+</head>
+<body>
+
+    <!--El Header o encabezado-->
+
+    <header>
+        <nav>
+         <ul>
+             <li><button onclick="changeLanguage('es')">Español</button></li>
+             <li><button onclick="changeLanguage('en')">English</button></li>
+             <li><a href="videos.html" id="video">VIDEOS</a></li>
+             <li class="icono-centrado"><a href="Index.html"><img src="icons/logo definitivo.png" alt="Logo de la página"></a></li>
+             <li><h1 id="recursos">RECURSOS</h1></li>
+             <li><button onclick="changeLanguage('pt')">Português</button></li>
+             <li><button onclick="changeLanguage('ja')">日本語</button></li>
+         </ul>
+        </nav>
+     </header>
+
+    <!--Parte Informativa-->
+
+    <main>
+        <section class="grid-cartas">
+            <article>
+                <div class="carta">
+                    <div class="imagen"><img src="icons/monitor negro.png" alt="Monitor"></div>
+                    <div class="contenido">
+                        <h2 id="titulo1">Validadores de accesibilidad</h2>
+                        <p class="desc" id="desc1">
+                            Utiliza herramientas que analizan tu sitio web y detectan problemas de accesibilidad,
+                            como errores en el contraste, etiquetas ARIA y navegación.
+                        </p>
+                        <a class="accion" href="https://wave.webaim.org/" target="_blank" id="enlace1">Usa la herramienta →</a>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="carta">
+                    <div class="imagen"><img src="icons/normas negro.png" alt="Normas"></div>
+                    <div class="contenido">
+                        <h2 id="titulo2">WCAG: Reglas de Accesibilidad.</h2>
+                        <p class="desc" id="desc2">Aprende los estándares globales que guían la creación de contenido web accesible para todos.</p>
+                        <a class="accion" href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" id="enlace2">Encuentra más →</a>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="carta">
+                    <div class="imagen"><img src="icons/libro negro.png" alt="Libros"></div>
+                    <div class="contenido">
+                        <h2 id="titulo3">Educación en Accesibilidad</h2>
+                        <p class="desc" id="desc3">Aprende a diseñar y desarrollar sitios web inclusivos mediante cursos especializados.</p>
+                        <a class="accion" href="https://www.edx.org/learn/accessibility/universitat-politecnica-de-valencia-tecnologia-accesible-para-la-inclusion?index=product&queryID=186a89fd4474233db56b5bb7497ff904&position=8&linked_from=autocomplete&c=autocomplete" target="_blank" id="enlace3">Ingresa al Curso →</a>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="carta">
+                    <div class="imagen"><img src="icons/configuraciones negra.png" alt="Engranajes"></div>
+                    <div class="contenido">
+                        <h2 id="titulo4">Plugins y librerías de Accesibilidad</h2>
+                        <p class="desc" id="desc4">Agrega funcionalidades accesibles fácilmente usando plugins y librerías.</p>
+                        <a class="accion" href="https://github.com/paypal/bootstrap-accessibility-plugin" target="_blank" id="enlace4">Acceda a la librería →</a>
+                    </div>
+                </div>
+            </article>
+        </section> 
+    </main>
+
+    <!--El footer-->
+
+    <footer>
+       <footer>
+        <div class="informacion-final">
+            <div class="sobre-nosotros">
+                <h5 id="nosotros">Sobre nosotros</h5>
+                <p id="info-nosotros">Somos estudiantes de la orientación de Informática del Martín Zapata...</p>
+            </div>
+            <div class="logo-footer">
+                <img src="icons/logo definitivo.png" alt="Logo de la página" class="logo-imagen">
+                <h1 class="footer-titulo" id="logo-desc">WEB PARA TODOS</h1>
+            </div>
+            <div class="redes-sociales">
+                <h5 id="redes">Redes sociales</h5>
+                <div class="iconos-redes">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="icons/instagram blanco.png" alt="Icono de Instagram" class="redes"></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="icons/twitter blanco.png" alt="Icono de Twitter" class="redes"></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><img src="icons/youtube blanco.png" alt="Icono de YouTube" class="redes"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p id="derechos">Copyright © 2024 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- Botón de accesibilidad -->
+
+    <div id="accesibilidad-container">
+        <button id="accesibilidad-btn">
+            <img src="icons/logo definitivo.png" alt="Accesibilidad">
+        </button>
+        <div id="accesibilidad-sidebar">
+            <button class="close-sidebar" id="close-sidebar">✖</button>
+            <h3>Opciones de Accesibilidad</h3>
+            <button class="accesibilidad-opcion" id="aumentar-texto">Aumentar Texto</button>
+            <button class="accesibilidad-opcion" id="disminuir-texto">Disminuir Texto</button>
+            <button class="accesibilidad-opcion" id="contraste-alto">Contraste Alto</button>
+            <button class="accesibilidad-opcion" id="zoom-cursor">Activar Zoom</button>
+            <button class="accesibilidad-opcion" id="desactivar-animaciones">Desactivar Animaciones</button>
+            <button class="accesibilidad-opcion" id="colores-simples">Colores Simples</button>
+        </div>
+    </div>
+    <script src="idioma-recursos.js"></script>
+    <script src="script.js"></script>
+    <script src="accesibilidad.js"></script>
+</body>
+</html>

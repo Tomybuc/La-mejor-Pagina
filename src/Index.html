@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<html lang="ja">
+<html lang="en">
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>WEB PARA TODOS</title>
+</head>
+<body>
+
+    <!--El Header o encabezado-->
+
+    <header>
+       <nav>
+        <ul>
+            <li><button onclick="changeLanguage('es')">Español</button></li>
+            <li><button onclick="changeLanguage('en')">English</button></li>
+            <li><a href="videos.html" id="video">VIDEOS</a></li>
+            <li class="icono-centrado"><img src="icons/logo definitivo.png" alt="Logo de la página"></li>
+            <li><a href="recursos.html" id="recursos">RECURSOS</a></li>
+            <li><button onclick="changeLanguage('pt')">Português</button></li>
+            <li><button onclick="changeLanguage('ja')">日本語</button></li>
+        </ul>
+       </nav>
+    </header>
+
+    <!--La introducción-->
+    <main>
+    <section class="introduccion">
+        <h2 id="intro">¿QUE ES LA ACCESIBILIDAD WEB?</h2>
+        <article>
+            <p id="intro-info">
+                La accesibilidad es el conjunto de prácticas y principios que buscan asegurar que todos puedan acceder, entender y usar un entorno, 
+                producto, servicio o contenido, independientemente de sus capacidades físicas, cognitivas o sensoriales.
+                Se aplica a muchos ámbitos, como el diseño de espacios, tecnologías, información, y servicios.
+            </p>
+        </article>
+    </section>
+
+    <!--Consejos para diferentes dificultades-->
+
+    <section class="consejos">
+        <article class="consejo-carta">
+            <h3 id="consejo-visibilidad">Visibilidad</h3>
+            <div class="consejo-texto">
+                <p id="info-visibilidad">Consejos y practicas para personas con problemas de visibilidad.</p>
+                <img src="icons/visibilidad.png" alt="ojo" class="consejo-imagen">
+            </div>
+            <a href="visibilidad.html" target="_blank" id="saber1">Saber más</a>
+        </article>
+        <article class="consejo-carta">
+            <h3 id="consejo-audicion">Audición</h3>
+            <div class="consejo-texto">
+                <p id="info-audicion">Consejos y practicas para personas con problemas de audición.</p>
+                <img src="icons/orejas.png" alt="orejas" class="consejo-imagen">
+            </div>
+            <a href="audicion.html" target="_blank" id="saber2">Saber más</a>
+        </article>
+        <article class="consejo-carta">
+            <h3 id="consejo-cognitivo">Cognitivos</h3>
+            <div class="consejo-texto">
+                <p id="info-cognitivo">Consejos y practicas para personas con problemas cognitivos.</p>
+                <img src="icons/cerebro.png" alt="cerebro" class="consejo-imagen">
+            </div>
+            <a href="cognitivo.html" target="_blank" id="saber3">Saber más</a>
+        </article>
+    </section>
+
+    <!--Más información sobre la accesibilidad-->
+
+    <section class="informacion">
+        <article class="informacion-carta">
+            <h4 id="caracteristicas">Características</h4>
+            <p id="info-caracteristica"> 
+                Perceptibilidad: La información debe ser perceptible para todos los usuarios. 
+                Operabilidad: Los usuarios deben poder interactuar con el producto o servicio sin dificultades.
+                Flexibilidad: La accesibilidad debe prever diferentes necesidades, adaptándose a los diversos modos en que 
+                los usuarios pueden interactuar con el entorno.
+            </p>
+        </article>
+        <article class="informacion-carta">
+            <h4 id="lograr">¿Cómo se logra?</h4>
+            <p id="info-lograr">
+                Lograr la accesibilidad implica implementar prácticas y estrategias en el diseño y desarrollo de entornos, 
+                productos y servicios para que sean inclusivos y fáciles de usar por personas con diversas capacidades.  
+            </p>
+        </article>
+        <article class="informacion-carta">
+            <h4 id="utilidad">¿Para qué sirve?</h4>
+            <p id="info-utilidad">
+                La accesibilidad sirve para garantizar que todas las personas, sin importar sus capacidades físicas, sensoriales, cognitivas o tecnológicas, 
+                puedan usar y beneficiarse de entornos, productos y servicios.
+                Para promover la igualdad, mejorar la experiencia del usuario y
+                aumentar el alcance y la audiciencia
+            </p>
+        </article>
+    </section>
+    </main>
+    
+    <!--El footer-->
+
+    <footer>
+        <div class="informacion-final">
+            <div class="sobre-nosotros">
+                <h5 id="nosotros">Sobre nosotros</h5>
+                <p id="info-nosotros">Somos estudiantes de la orientación de Informática del Martín Zapata...</p>
+            </div>
+            <div class="logo-footer">
+                <img src="icons/logo definitivo.png" alt="Logo de la página" class="logo-imagen">
+                <h1 class="footer-titulo">WEB PARA TODOS</h1>
+            </div>
+            <div class="redes-sociales">
+                <h5 id="redes">Redes sociales</h5>
+                <div class="iconos-redes">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="icons/instagram blanco.png" alt="Icono de Instagram" class="redes"></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="icons/twitter blanco.png" alt="Icono de Twitter" class="redes"></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><img src="icons/youtube blanco.png" alt="Icono de YouTube" class="redes"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p id="derechos">Copyright © 2024 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- Botón de accesibilidad -->
+
+    <div id="accesibilidad-container">
+        <button id="accesibilidad-btn">
+            <img src="icons/logo definitivo.png" alt="Accesibilidad">
+        </button>
+        <div id="accesibilidad-sidebar">
+            <button class="close-sidebar" id="close-sidebar">✖</button>
+            <h3>Opciones de Accesibilidad</h3>
+            <button class="accesibilidad-opcion" id="aumentar-texto">Aumentar Texto</button>
+            <button class="accesibilidad-opcion" id="disminuir-texto">Disminuir Texto</button>
+            <button class="accesibilidad-opcion" id="contraste-alto">Contraste Alto</button>
+            <button class="accesibilidad-opcion" id="zoom-cursor">Activar Zoom</button>
+            <button class="accesibilidad-opcion" id="desactivar-animaciones">Desactivar Animaciones</button>
+            <button class="accesibilidad-opcion" id="colores-simples">Colores Simples</button>
+        </div>
+    </div>
+
+    <script src="accesibilidad.js"></script>
+    <script src="narrador.js"></script>
+    <script src="idioma-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-videos.css">
+    <title>WEB PARA TODOS</title>
+</head>
+<body>
+    
+     <!--El Header o encabezado-->
+
+    <header>
+        <nav>
+         <ul>
+             <li><button onclick="changeLanguage('es')">Español</button></li>
+             <li><button onclick="changeLanguage('en')">English</button></li>
+             <li><h1>VIDEOS</h1></li>
+             <li class="icono-centrado"><a href="Index.html"><img src="icons/logo definitivo.png" alt="Logo de la página"></a></li>
+             <li><a href="recursos.html" id="recursos">RECURSOS</a></li>
+             <li><button onclick="changeLanguage('pt')">Português</button></li>
+             <li><button onclick="changeLanguage('ja')">日本語</button></li>
+         </ul>
+        </nav>
+     </header>
+
+
+    
+     <section class="video-section">
+        <header class="video-header">
+            <h2> Titulo </h2>
+            <p> Descripción </p>
+        </header>
+        <div class="video-slider">
+            <button class="slider-btn prev-btn">&#10094;</button>
+        <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/gQIKQO41pME?si=Y7SbV6za23K8fWzQ&amp;controls=0" title="Video 1" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/m67d6q_oYHo" title="Video 2" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/OkBIttAqCuo?si=E42QSKWNFDoJWobu&amp;controls=0" title="Video 3" frameborder="0"  allowfullscreen></iframe>
+        </div>
+            <button class="slider-btn next-btn">&#10095;</button>
+        </div>
+    </section>
+    <!--El footer-->
+    
+
+    <footer>
+        <div class="informacion-final">
+            <div class="sobre-nosotros">
+                <h5 id="nosotros">Sobre nosotros</h5>
+                <p id="info-nosotros">Somos estudiantes de la orientación de Informática del Martín Zapata...</p>
+            </div>
+            <div class="logo-footer">
+                <img src="icons/logo definitivo.png" alt="Logo de la página" class="logo-imagen">
+                <h1 class="footer-titulo">WEB PARA TODOS</h1>
+            </div>
+            <div class="redes-sociales">
+                <h5 id="redes">Redes sociales</h5>
+                <div class="iconos-redes">
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><img src="icons/instagram blanco.png" alt="Icono de Instagram" class="redes"></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><img src="icons/twitter blanco.png" alt="Icono de Twitter" class="redes"></a>
+                    <a href="https://youtube.com" target="_blank" aria-label="YouTube"><img src="icons/youtube blanco.png" alt="Icono de YouTube" class="redes"></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p id="derechos">Copyright © 2024 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- Botón de accesibilidad -->
+
+    <div id="accesibilidad-container">
+        <button id="accesibilidad-btn">
+            <img src="icons/logo definitivo.png" alt="Accesibilidad">
+        </button>
+        <div id="accesibilidad-sidebar">
+            <button class="close-sidebar" id="close-sidebar">✖</button>
+            <h3>Opciones de Accesibilidad</h3>
+            <button class="accesibilidad-opcion" id="aumentar-texto">Aumentar Texto</button>
+            <button class="accesibilidad-opcion" id="disminuir-texto">Disminuir Texto</button>
+            <button class="accesibilidad-opcion" id="contraste-alto">Contraste Alto</button>
+            <button class="accesibilidad-opcion" id="zoom-cursor">Activar Zoom</button>
+            <button class="accesibilidad-opcion" id="desactivar-animaciones">Desactivar Animaciones</button>
+            <button class="accesibilidad-opcion" id="colores-simples">Colores Simples</button>
+        </div>
+    </div>
+    <script src="narrador.js"></script>
+    <script src="slide.js"></script>
+    <script src="accesibilidad.js"></script>
+</body>
+</html>
